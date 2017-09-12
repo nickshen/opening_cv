@@ -152,12 +152,14 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="cv_imgproc.h" />
+    <ClInclude Include="cv_facetrack.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="cv_imgproc.cpp" />
     <ClCompile Include="cv_intro.cpp" />
+    <ClCompile Include="cv_facetrack.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>

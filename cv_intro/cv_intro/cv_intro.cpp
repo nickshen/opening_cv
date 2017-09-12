@@ -8,12 +8,15 @@
 #include <opencv2/imgproc/imgproc.hpp>     // cv::Canny()
 
 #include "cv_imgproc.h"
+#include "cv_facetrack.h"
 
 using namespace std;
 using namespace cv;
 
+
 int main(int argc, char** argv) {
 	//loadImgDemo("going-merry.png");
 	//blurImgDemo("going-merry.png");
-	loadVideoDemo("flame.avi");
+	//loadVideoDemo("flame.avi");
+	initCameraStream();
 }

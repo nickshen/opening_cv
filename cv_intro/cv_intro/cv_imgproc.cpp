@@ -115,3 +115,4 @@ int loadVideoDemo(char* fileName)
 }
 
 //next task: play video from input stream, apply median blur to every frame
+//then.. apply 6 morphologies to 6 copies of input stream

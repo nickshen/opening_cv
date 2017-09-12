@@ -27,6 +27,9 @@
     <ClInclude Include="cv_imgproc.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="cv_facetrack.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -36,6 +39,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="cv_imgproc.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="cv_facetrack.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
