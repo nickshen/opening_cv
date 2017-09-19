@@ -39,7 +39,9 @@ int initCameraStream()
 			break;
 		}
 		//-- 3. Apply the classifier to the frame
+		cout << "Width: " << frame.size().width << endl;
 		detectAndDisplay(frame);
+		//imshow(window_name, frame);
 		char c = (char)waitKey(100);
 		if (c == 27) { break; } // escape
 	}
@@ -52,7 +54,7 @@ void detectAndDisplay(Mat frame)
 	cvtColor(frame, frame_gray, COLOR_BGR2GRAY);
 	equalizeHist(frame_gray, frame_gray);
 	//-- Detect faces
-	face_cascade.detectMultiScale(frame_gray, faces, 1.1, 2, 0 | CASCADE_SCALE_IMAGE, Size(30, 30));
+	face_cascade.detectMultiScale(frame_gray, faces, 1.1, 2, 0 | CASCADE_SCALE_IMAGE, Size(100, 100));
 	for (size_t i = 0; i < faces.size(); i++)
 	{
 		Point center(faces[i].x + faces[i].width / 2, faces[i].y + faces[i].height / 2);
@@ -60,7 +62,7 @@ void detectAndDisplay(Mat frame)
 		Mat faceROI = frame_gray(faces[i]);
 		std::vector<Rect> eyes;
 		//-- In each face, detect eyes
-		eyes_cascade.detectMultiScale(faceROI, eyes, 1.1, 2, 0 | CASCADE_SCALE_IMAGE, Size(30, 30));
+		eyes_cascade.detectMultiScale(faceROI, eyes, 1.1, 2, 0 | CASCADE_SCALE_IMAGE, Size(20, 20));
 		for (size_t j = 0; j < eyes.size(); j++)
 		{
 			Point eye_center(faces[i].x + eyes[j].x + eyes[j].width / 2, faces[i].y + eyes[j].y + eyes[j].height / 2);

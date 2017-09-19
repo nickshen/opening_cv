@@ -19,4 +19,5 @@ int main(int argc, char** argv) {
 	//blurImgDemo("going-merry.png");
 	//loadVideoDemo("flame.avi");
 	initCameraStream();
+	//runBackgroundSub("flame.avi");
 }
