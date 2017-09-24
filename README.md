@@ -1,5 +1,6 @@
 # opening_cv
-Explorations in Computer Vision w/ OpenCV. Chewing through “Computer Vision: Algorithms and Applications” by Richard Szeliski
+Explorations in Computer Vision w/ OpenCV. <br />
+Chewing through “Computer Vision: Algorithms and Applications” by Richard Szeliski
 
 ##### Laplacian Transformations videos watched
 https://www.youtube.com/watch?v=ZGPtPkTft8g (graphical) <br />
