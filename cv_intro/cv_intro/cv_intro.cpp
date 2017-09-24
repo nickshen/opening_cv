@@ -18,6 +18,7 @@ int main(int argc, char** argv) {
 	//loadImgDemo("going-merry.png");
 	//blurImgDemo("going-merry.png");
 	//loadVideoDemo("flame.avi");
-	initCameraStream();
+	//initCameraStream();
 	//runBackgroundSub("flame.avi");
+	detectEdgeExample("dashcam.png");
 }

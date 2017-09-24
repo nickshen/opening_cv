@@ -158,6 +158,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="cv_bgsub.cpp" />
+    <ClCompile Include="cv_edgedetect.cpp" />
     <ClCompile Include="cv_imgproc.cpp" />
     <ClCompile Include="cv_intro.cpp" />
     <ClCompile Include="cv_facetrack.cpp" />
