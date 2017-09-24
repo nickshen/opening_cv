@@ -30,7 +30,7 @@ static void CannyThreshold(int, void*)
 	imshow(window_name, dst);
 }
 
-int detectEdgeExample(char* fileName)
+int detectEdgeCanny(char* fileName)
 {
 	src = imread(fileName, IMREAD_COLOR); // Load an image
 	if (src.empty())
@@ -42,6 +42,30 @@ int detectEdgeExample(char* fileName)
 	namedWindow(window_name, WINDOW_AUTOSIZE);
 	createTrackbar("Min Threshold:", window_name, &lowThreshold, max_lowThreshold, CannyThreshold);
 	CannyThreshold(0, 0);
+	waitKey(0);
+	return 0;
+}
+
+int detectEdgeLaplacian(char* fileName)
+{
+	Mat src, src_gray, dst;
+	int kernel_size = 3;
+	int scale = 1;
+	int delta = 0;
+	int ddepth = CV_16S;
+	const char* window_name = "Laplace Demo";
+	String imageName = fileName;
+	src = imread(imageName, IMREAD_COLOR); // Load an image
+	if (src.empty())
+	{
+		return -1;
+	}
+	GaussianBlur(src, src, Size(3, 3), 0, 0, BORDER_DEFAULT);
+	cvtColor(src, src_gray, COLOR_BGR2GRAY); // Convert the image to grayscale
+	Mat abs_dst;
+	Laplacian(src_gray, dst, ddepth, kernel_size, scale, delta, BORDER_DEFAULT);
+	convertScaleAbs(dst, abs_dst);
+	imshow(window_name, abs_dst);
 	waitKey(0);
 	return 0;
 }

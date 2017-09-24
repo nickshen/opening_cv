@@ -20,5 +20,6 @@ int main(int argc, char** argv) {
 	//loadVideoDemo("flame.avi");
 	//initCameraStream();
 	//runBackgroundSub("flame.avi");
-	detectEdgeExample("dashcam.png");
+	detectEdgeCanny("dashcam.png");
+	detectEdgeLaplacian("dashcam.png");
 }
