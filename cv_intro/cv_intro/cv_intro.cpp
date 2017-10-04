@@ -15,11 +15,11 @@ using namespace cv;
 
 
 int main(int argc, char** argv) {
-	//loadImgDemo("going-merry.png");
-	//blurImgDemo("going-merry.png");
-	//loadVideoDemo("flame.avi");
-	//initCameraStream();
-	//runBackgroundSub("flame.avi");
+	loadImgDemo("me.jpg");
+	blurImgDemo("me.jpg");
+	loadVideoDemo("flame.avi");
+	initCameraStream();
+	runBackgroundSub("flame.avi");
 	detectEdgeCanny("dashcam.png");
 	detectEdgeLaplacian("dashcam.png");
 }

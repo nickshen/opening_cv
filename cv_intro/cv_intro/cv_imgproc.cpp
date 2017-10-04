@@ -13,7 +13,7 @@ using namespace cv;
 
 int DELAY_CAPTION = 1000;
 int DELAY_BLUR = 100;
-int MAX_KERNEL_LENGTH = 31;	//size of bounds to blur, changes AoE and amount of computation
+int MAX_KERNEL_LENGTH = 16;	//size of bounds to blur, changes AoE and amount of computation
 
 Mat source; Mat dest;
 char window_name[] = "Smoothing Demo";
@@ -47,27 +47,29 @@ int blurImgDemo(cv::String imgToLoad)
 		blur(source, dest, Size(i, i), Point(-1, -1));
 		if (display_dst(DELAY_BLUR) != 0) { return 0; }
 	}
-
+	waitKey(0);
 	if (display_caption("Gaussian Blur") != 0) { return 0; }
 	for (int i = 1; i < MAX_KERNEL_LENGTH; i = i + 2)
 	{
 		GaussianBlur(source, dest, Size(i, i), 0, 0);
 		if (display_dst(DELAY_BLUR) != 0) { return 0; }
 	}
-
+	waitKey(0);
 	if (display_caption("Median Blur") != 0) { return 0; }
 	for (int i = 1; i < MAX_KERNEL_LENGTH; i = i + 2)
 	{
 		medianBlur(source, dest, i);
 		if (display_dst(DELAY_BLUR) != 0) { return 0; }
 	}
-
+	waitKey(0);
 	if (display_caption("Bilateral Blur") != 0) { return 0; }
-	for (int i = 1; i < MAX_KERNEL_LENGTH; i = i + 2)
+	for (int i = 1; i < MAX_KERNEL_LENGTH*2; i = i + 2)
 	{
 		bilateralFilter(source, dest, i, i * 2, i / 2);
 		if (display_dst(DELAY_BLUR) != 0) { return 0; }
 	}
+	waitKey(0);
+
 	display_caption("End: Press a key!");
 	waitKey(0);
 	return 0;
