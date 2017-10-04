@@ -6,7 +6,7 @@ Chewing through “Computer Vision: Algorithms and Applications” by Richard Sz
 
 | Laplacian Edge Detection      | Canny Edge Detection |
 | ------------- |:-------------:|
-| <img src="https://github.com/nickshen/opening_cv/blob/master/docs/laplace.JPG?raw=true" width="450px" /> | <img src="https://github.com/nickshen/opening_cv/blob/master/docs/canny_edge.JPG?raw=true" width="450px" /> |
+| <img src="https://github.com/nickshen/opening_cv/blob/master/docs/laplace.JPG?raw=true" width="340px" /> | <img src="https://github.com/nickshen/opening_cv/blob/master/docs/canny_edge.JPG?raw=true" width="340px" /> |
 
 ##### Types of Blur
 Original      | Gaussian | Median      | Bilateral |  Homogeneous <br />
